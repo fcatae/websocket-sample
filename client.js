@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://localhost:8080');
+const ws = new WebSocket('ws://immense-hollows-85658.herokuapp.com');
 
 ws.on('open', function open() {
   ws.send('CONNECTED: Counter App');

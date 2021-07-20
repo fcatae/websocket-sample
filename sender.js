@@ -1,7 +1,7 @@
 const readline = require('readline');
 const WebSocket = require('ws');
 
-const ws = new WebSocket('ws://localhost:8080');
+const ws = new WebSocket('ws://immense-hollows-85658.herokuapp.com');
 
 var client_name = process.argv[2] || '<default>';
 console.log('Client name: ' + client_name);
