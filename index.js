@@ -12,6 +12,7 @@ const wss = new WebSocket.Server({ server });
 
 wss.on('connection', function connection(ws, req) {
   console.log(req.url)
+  console.log(req.headers)
   ws.on('message', function incoming(message) {
     broadcast(message);
     console.log('%s', message);    
