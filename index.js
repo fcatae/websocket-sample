@@ -10,7 +10,8 @@ const server = express()
 
 const wss = new WebSocket.Server({ server });
 
-wss.on('connection', function connection(ws) {
+wss.on('connection', function connection(ws, req) {
+  console.log(req.url)
   ws.on('message', function incoming(message) {
     broadcast(message);
     console.log('%s', message);    
